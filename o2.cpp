@@ -27,9 +27,9 @@ public:
 books::books() 
 {
     // Allocate memory for strings
-    tt = new char[50];
-    aut = new char[50];
-    pub = new char[50];
+    tt = new char;
+    aut = new char;
+    pub = new char;
 }
 
 books::~books() 
@@ -62,7 +62,9 @@ void books::display()
 void books::search() 
 {
     int f = 0, total, cp = 0;
-    char t[50], a[50];
+    char *t, *a;
+    t = new char;
+    a = new char;
 
     cout << "Enter the title of the book you want to search: ";
     cin >> t;
